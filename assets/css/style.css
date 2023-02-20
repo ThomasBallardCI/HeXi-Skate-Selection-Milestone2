@@ -37,14 +37,14 @@ body{
 .text-area p {
   margin-top: 0;
   margin-right: 2rem;
-  font-size: 24px;
+  font-size: 1.3750em;
   text-align: left;
 }
 
 .logo {
   display: grid;
   grid-area: logo;
-  background-image: url("/assets/images/logo.png");
+  background-image: url("/assets/images/BlackArtboard1LogoTshirtBlack.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,12 +77,55 @@ body{
   border-radius: 500px;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  font-size: 1.5rem;
+  font-size: 21px;
   background-color: #F1F1F1;
+  cursor: pointer;
  }
 
- .logo-picture {
-  place-self: center;
-  height: 100%;
-  width: auto;
+ button:hover {
+  border: 2px solid #7037ab;
+  color: #7037ab;
  }
+
+ /* Tablet Styling */
+ @media only screen and (max-width: 1024px)
+{
+
+.container {
+  grid-template-areas:
+    "logo logo logo"
+    "text-area text-area text-area"
+    "button-area button-area button-area";
+  grid-template-rows: 1fr 1fr 0.5fr;
+  width: 75vw;
+  height: 75vh;
+}
+}
+
+/* Mobile Styling */
+@media only screen and (max-width: 405px)
+{
+  .container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "text-area"
+      "button-area";
+  }
+
+  .text-area h1 {
+    font-size: 1.5em;
+  }
+
+  .text-area p {
+    font-size: 1em;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .logo {
+    display: none;
+  }
+}

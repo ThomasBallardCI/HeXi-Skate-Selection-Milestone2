@@ -73,7 +73,7 @@ body{
  button {
   justify-self: center;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 500px;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -107,12 +107,15 @@ body{
 {
   .container {
     display: grid; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: 1fr; 
+    grid-template-columns: 0.1fr 5fr 0.1fr; 
+    grid-template-rows: 0.1fr 1fr 0.1fr; 
     gap: 0px 0px; 
     grid-template-areas: 
-      "text-area"
-      "button-area";
+      ". text-area ."
+      ". button-area .";
+    padding: 1em;
+    width: 85vw;
+    height: 90vh;
   }
 
   .text-area h1 {
@@ -128,4 +131,21 @@ body{
   .logo {
     display: none;
   }
+
+  .button-area {
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr 0fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . ."
+      ". button button ."
+      ". . . .";
+    grid-area: button-area;
+}
+
+button {
+  height: 75%;
+}
 }

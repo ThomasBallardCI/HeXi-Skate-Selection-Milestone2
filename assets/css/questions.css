@@ -11,6 +11,10 @@ body{
   font-family: 'Inter', sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -100,7 +104,7 @@ button:hover {
   grid-area: submit-button;
 }
 
-.submit-btn {
+#submit-btn {
   width: 100%;
   height: auto;
 }

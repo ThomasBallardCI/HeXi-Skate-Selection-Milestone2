@@ -21,6 +21,7 @@ let questions = [{
     ]
 }];
 
+// function to start quizz (to be called)
 function beginQuiz(){
     currentQuestion = 0;
     question.innerHTML = questions[currentQuestion].question;

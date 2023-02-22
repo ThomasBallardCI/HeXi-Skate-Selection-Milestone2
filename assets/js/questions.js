@@ -8,6 +8,23 @@ const start = document.getElementsByClassName('start-btn');
 
 document.getElementById("panel-2").style.display = "none";
 
+// button selection color change
+var button = document.getElementsByClassName("btn");
+var addSelectedClass = function(){
+    removeSelectClass();
+    this.classList.add('selected');
+};
+
+var removeSelectClass = function (){
+    for (var i =0; i < button.length; i++) {
+        button[i].classList.remove('selected');
+    }
+};
+for (var i =0; i < button.length; i++) {
+    button[i].addEventListener("click", addSelectedClass);
+};
+
+
 // empty array to store selection responses
 let responses = [];
 

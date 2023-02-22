@@ -15,6 +15,17 @@ body{
   display: none;
 }
 
+button.selected {
+  background-color: #7037ab;
+  color: #F1F1F1;
+  border: 2px solid #F1F1F1;
+}
+
+button.selected:hover {
+  border: 2px solid #F1F1F1;
+  color: #F1F1F1;
+}
+
 .container-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

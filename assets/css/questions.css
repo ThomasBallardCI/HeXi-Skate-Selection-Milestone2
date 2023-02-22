@@ -15,7 +15,7 @@ body{
   display: none;
 }
 
-.container {
+.container-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 3fr 1fr 1fr;
@@ -52,11 +52,11 @@ body{
   text-align: center;
 }
 
-h1 {
+#question {
   margin-top: 0;
 }
 
-button {
+.btn {
   border-radius: 500px;
   border: none;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -65,7 +65,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   border: 2px solid #7037ab;
   color: #7037ab;
 }
@@ -111,7 +111,7 @@ button:hover {
 
 /* Tablet Styling */
 @media only screen and (max-width: 1024px) {
-.container {
+.container-1 {
   grid-template-columns: 0.5fr 5fr 0.5fr;
   grid-template-rows: 2fr 1fr 1fr 1fr 0.5fr;
   grid-template-areas:
@@ -124,7 +124,7 @@ button:hover {
   height: 75vh;
 }
 
-.submit-btn {
+#submit-btn {
   width: 50%;
   justify-self: center;
 }
@@ -136,7 +136,7 @@ button:hover {
   display: none;
 }
 
-.container {
+.container-1 {
   grid-template-columns: 0.1fr 1fr 0.1fr;
   grid-template-rows: 1fr 1fr 1fr 0.25fr;
   gap: 1em 1em;
@@ -153,5 +153,116 @@ button:hover {
 .answer-btn {
   width: 100%;
   height: 90%;
+}
+}
+
+/* Container-2 (results styling) */
+.container-2 {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "recommendation-area recommended-image-area"
+    "button-area button-area";
+  width: 900px;
+  height: 450px;
+  place-self: center;
+  background-color: #F1F1F1;
+  border-radius: 20px;
+  padding: 2em;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+  
+#rec-area {
+  grid-area: recommendation-area;
+}
+  
+#rec-img-area { 
+  grid-area: recommended-image-area;
+  display: grid;
+  background-image: url("/assets/images/BlackArtboard1LogoTshirtBlack.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  
+#rec-btn-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  justify-items: center;
+  grid-template-areas:
+    ". ."
+    "contact-button restart-button"
+    ". .";
+  grid-area: button-area;
+}
+  
+.contact-button {
+  display: grid;
+  grid-area: contact-button;
+  width: 75%;
+}
+  
+.restart-button {
+  display: grid;
+  grid-area: restart-button;
+  width: 75%;  
+}
+
+.rec-btn {
+  border-radius: 500px;
+  border: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 21px;
+  background-color: #F1F1F1;
+  cursor: pointer;
+}
+
+#rec-btn:hover {
+  border: 2px solid #7037ab;
+  color: #7037ab;
+}
+
+#rec-h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 5em;
+}
+
+#rec-p {
+  margin: 0;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+/* Tablet Styling */
+@media only screen and (max-width: 1024px) {
+.container-2 {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  grid-template-areas:
+    ". recommended-image-area ."
+    ". recommendation-area ."
+    ". button-area button-area";
+  width: 75vw;
+  height: 75vh;
+}
+}
+
+/* Mobile Styling */
+@media only screen and (max-width: 449px) {
+#rec-h1 {
+  font-size: 3em;
+}
+#rec-p {
+  font-size: 1em;
+}
+.rec-btn {
+  font-size: 1em;
 }
 }

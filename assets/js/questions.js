@@ -4,6 +4,9 @@ const answerBtnC = document.getElementById('c');
 const submitBtn = document.getElementById('submit-btn')
 const question = document.getElementById('question');
 const image = document.getElementsByClassName('picture-area');
+const start = document.getElementsByClassName('start-btn');
+
+document.getElementById("panel-2").style.display = "none";
 
 // empty array to store selection responses
 let responses = [];
@@ -12,23 +15,32 @@ let responses = [];
 let currentQuestion = 0;
 
 // array of questions
-let questions = [{
+let questions = [
+    {
     question: "What would you say your foot width is?",
-    answers: [
-        {option:"Narrow", answer:a},
-        {option:"Regular", answer:b},
-        {option:"Wide", answer:c}
-    ]
-}];
+    answers: ["Narrow", "Regular", "Wide"]
+    },
+    {
+    question: "What is your prefered price point?",
+    answers: ["100-250", ""]     
+    }
+];
 
 // function to start quizz (to be called)
 function beginQuiz(){
-    currentQuestion = 0;
-    question.innerHTML = questions[currentQuestion].question;
-    answerBtnA.innerHTML = questions[currentQuestion].answers[0].option;
-    answerBtnB.innerHTML = questions[currentQuestion].answers[1].option;
-    answerBtnC.innerHTML = questions[currentQuestion].answers[2].option;
+    loadQuestion(0);
+
 }
+
+function loadQuestion(currentQuestion) {
+    question.innerHTML = questions[currentQuestion].question;
+    answerBtnA.innerHTML = questions[currentQuestion].answers[0];
+    answerBtnB.innerHTML = questions[currentQuestion].answers[1];
+    answerBtnC.innerHTML = questions[currentQuestion].answers[2];
+}
+
+// start Quiz from click of index.html start buton
+start.addEventListener("click", beginQuiz());
 
 beginQuiz();
 console.log(questions);

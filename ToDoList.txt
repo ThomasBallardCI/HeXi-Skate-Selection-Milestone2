@@ -1,0 +1,20 @@
+Run Quiz from clicking "start" in Index.html
+make answers A.B.C Logable on submit and change question provided
+use A.B.C logs to correspond them to outcome response of recommend skate
+populate recommend skate slide with predefined text for each possible skate outcome
+create restart quiz button
+create contact page using email API
+
+main functions
+
+alow user to select 1 of 3 answers based on the question asked.
+Log the selected (by click) answer when submit is clicked
+load new question  and repeat until all questions have been asked and submitted
+on final question submit load recommend skate html doc to show user which skate to buy
+have a working contact us button to take user to email contact from
+have working restart buttont to restart quiz so user can change responses
+
+on reload of page do not restart quiz but stay at the current question
+
+change CSS background image per question when submitting response and loading next question
+

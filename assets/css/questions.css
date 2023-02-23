@@ -103,7 +103,6 @@ button.selected:hover {
 .picture-area { 
   grid-area: picture-area;
   display: grid;
-  background-image: url("/assets/images/footwidthpicture.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

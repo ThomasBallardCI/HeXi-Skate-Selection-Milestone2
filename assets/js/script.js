@@ -5,24 +5,25 @@ const submitBtn = document.getElementById('submit-btn')
 const question = document.getElementById('question');
 const image = document.getElementsByClassName('picture-area');
 const start = document.getElementsByClassName('start-btn');
+const selected = document.getElementsByClassName('selected');
 
 // Results panel Hidden
 document.getElementById("panel-2").style.display = "none";
 
 //---------------------------------------------------------
 // button selection color change
-var button = document.getElementsByClassName("answer-btn");
-var addSelectedClass = function(){
+let button = document.getElementsByClassName("answer-btn");
+let addSelectedClass = function(){
     removeSelectClass();
     this.classList.add('selected');
 };
 
-var removeSelectClass = function (){
-    for (var i =0; i < button.length; i++) {
+let removeSelectClass = function (){
+    for (let i =0; i < button.length; i++) {
         button[i].classList.remove('selected');
     }
 };
-for (var i =0; i < button.length; i++) {
+for (let i =0; i < button.length; i++) {
     button[i].addEventListener("click", addSelectedClass);
 };
 
@@ -31,7 +32,9 @@ for (var i =0; i < button.length; i++) {
 let questions = [
     {
     question: "What would you say your foot width is?",
+    imgSrc: "url('/assets/image/footwidthpicture.jpg')",
     answers: ["Narrow", "Regular", "Wide"]
+    
     },
     {
     question: "What is your prefered price point?",
@@ -43,12 +46,6 @@ let questions = [
     }
 ];
 
-//-----------------------------------------------------------
-let questionImages = [
-    {
-    image: 'url("/assets/images/PriceRange.png")'
-    }
-]
 
 // function to start quizz (to be called)
 function beginQuiz(){
@@ -61,7 +58,6 @@ function loadQuestion(currentQuestion) {
     answerBtnA.innerHTML = questions[currentQuestion].answers[0];
     answerBtnB.innerHTML = questions[currentQuestion].answers[1];
     answerBtnC.innerHTML = questions[currentQuestion].answers[2];
-    image.style.backgroundImage = questionImages[currentImage].image;
 }
 
 // array for keep track of current question to display
@@ -73,6 +69,9 @@ beginQuiz();
 // empty array to store selection responses
 let responses = [];
 
-
+    // read selected class log the Value
+    // interate to the next question
+    // clear the selected class
+    // on third question load the results page
 
 

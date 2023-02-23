@@ -18,3 +18,19 @@ on reload of page do not restart quiz but stay at the current question
 
 change CSS background image per question when submitting response and loading next question
 
+
+submit button - 
+Needs to log answer value of selected response to array as string
+
+Needs to repopulate  next question, answers and remove selected
+
+after all 3 questions need to call results panel and populate with 
+recommendation HTML based on response array string combination
+
+each question
+needs to change HTML for question and responses as well as image for each
+
+response page
+needs to change HTML depending on response called from potential recommendation
+and assign image that corresponds
+            

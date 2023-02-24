@@ -8,7 +8,7 @@ const start = document.getElementsByClassName('start-btn');
 const selected = document.getElementsByClassName('selected');
 
 // Results panel Hidden
-const resultsPanel = document.getElementById("panel-2");
+const resultsPanel = document.getElementById("panel-1");
 resultsPanel.style.display = "none";
 
 //---------------------------------------------------------
@@ -81,7 +81,7 @@ function loadQuestion(questionIndex) {
         // check if answer is selected
         if (selectedAnswer) {
             // log selected answer
-            console.log(`Question ${currentQuestion+1}: ${selectedAnswer.id}`);
+            console.log(`${selectedAnswer.id}`);
             // move to next question
             currentQuestion++;
             // clear selection

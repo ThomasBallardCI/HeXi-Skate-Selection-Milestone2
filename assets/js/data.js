@@ -8,7 +8,7 @@ const start = document.getElementsByClassName('start-btn');
 const selected = document.getElementsByClassName('selected');
 
 // Results panel Hidden
-const resultsPanel = document.getElementById("panel-2");
+const resultsPanel = document.getElementById("panel-1");
 resultsPanel.style.display = "none";
 
 //---------------------------------------------------------
@@ -98,21 +98,6 @@ function loadQuestion(questionIndex) {
         }
     });
 }
-
-// Restart quiz function
-function restartQuiz() {
-    // Reset current question
-    currentQuestion = 0;
-    // Reset answers array
-    answers = [];
-    // Remove displayed user's answers
-    document.getElementById("user-answers").innerHTML = "";
-    // Hide results panel
-    document.getElementById("panel-2").style.display = "none";
-    // Load first question
-    loadQuestion(currentQuestion);
-}
-
 
 // call beginQuiz to start the quiz
 beginQuiz();

@@ -233,7 +233,7 @@ button.selected:hover {
   cursor: pointer;
 }
 
-#rec-btn:hover {
+.rec-btn:hover {
   border: 2px solid #7037ab;
   color: #7037ab;
 }

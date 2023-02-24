@@ -68,7 +68,7 @@ display: grid;
 .restart-button {
   display: grid;
   grid-area: restart-button;
-  width: 75%;  
+  width: 75%;
 }
 
 button {

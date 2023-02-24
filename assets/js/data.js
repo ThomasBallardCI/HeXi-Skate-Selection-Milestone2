@@ -8,7 +8,7 @@ const start = document.getElementsByClassName('start-btn');
 const selected = document.getElementsByClassName('selected');
 
 // Results panel Hidden
-const resultsPanel = document.getElementById("panel-1");
+const resultsPanel = document.getElementById("panel-2");
 resultsPanel.style.display = "none";
 
 //---------------------------------------------------------

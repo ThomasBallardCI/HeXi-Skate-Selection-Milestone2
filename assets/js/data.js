@@ -8,7 +8,7 @@ const start = document.getElementsByClassName('start-btn');
 const selected = document.getElementsByClassName('selected');
 
 // Results panel Hidden
-const resultsPanel = document.getElementById("panel-1");
+const resultsPanel = document.getElementById("panel-2");
 resultsPanel.style.display = "none";
 
 //---------------------------------------------------------
@@ -93,7 +93,8 @@ function loadQuestion(questionIndex) {
                     // hide quiz panel
                     document.getElementById("panel-1").style.display = "none";
                     // show results panel
-                    resultsPanel.style.display = "block";
+                    resultsPanel.style.display = "grid";
+                    console.log(resultsPanel);
             }
         }
     });

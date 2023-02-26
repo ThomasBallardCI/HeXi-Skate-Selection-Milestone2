@@ -42,7 +42,7 @@ let questions = [
     },
     {
         question: "What is your preferred price point?",
-        imgSrc: "url('/assets/images/PriceRange.png')",
+        imgSrc: "url('assets/images/PriceRange.png')",
         answers: [
             {id: "a", text: "£100-£250"},
             {id: "b", text: "£250-£400"},

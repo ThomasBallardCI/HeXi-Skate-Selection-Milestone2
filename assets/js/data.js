@@ -33,7 +33,7 @@ for (let i =0; i < button.length; i++) {
 let questions = [
     {
         question: "What would you say your foot width is?",
-        imgSrc: "url('/assets/images/footwidthpicture.jpg')",
+        imgSrc: "url('..assets/images/footwidthpicture.jpg')",
         answers: [
             {id: "a", text: "Narrow"},
             {id: "b", text: "Regular"},

@@ -1,6 +1,6 @@
-<h1 align="center">ANAGRAM word puzzle website</h1>
+<h1 align="center">HeXi Skate Selector Survey</h1>
 
-[View the live project here](https://elainebroche-dev.github.io/ms2-anagram/)
+[View the live project here](https://thomasballardci.github.io/HeXi-Skate-Selection-Milestone2/)
 
 ANAGRAM is an online word game.  The user is asked to identify themselves using a username and then can choose from a range of topics.  Once a topic has been chosen the user is asked to solve 10 anagrams, selected randomly from the list of anagrams that are available for that topic.  One anagram is shown at a time and the user has a 1 minute time limit to enter the answer.  Once the user enters an answer and clicks "Check Answer", the game gives feedback as to whether it was correct or not, and also displays the correct answer.  A progress bar, anagram/question count and correct answer count on-screen show the user where they are in the current round and how they are doing.  At the end of the 10 anagram round the user is brought to an end-of-round screen to see their score and get feedback - from this point they can choose to end the game or go back and select a new topic and try again.
 

@@ -59,12 +59,16 @@ let questions = [
     }
 ];
 
-let currentQuestion = 0; // variable to keep track of current question
+
+// variable to keep track of current question
+let currentQuestion = 0; 
 
 // function to start quiz (to be called)
 function beginQuiz(){
     loadQuestion(currentQuestion);
 }
+
+let selectedResults = [];
 
 // function to load question data
 function loadQuestion(questionIndex) {
@@ -81,7 +85,8 @@ function loadQuestion(questionIndex) {
         // check if answer is selected
         if (selectedAnswer) {
             // log selected answer
-            console.log(`${selectedAnswer.id}`);
+            selectedResults.push(selectedAnswer.id); // add selected answer to array
+            console.log(selectedResults);
             // move to next question
             currentQuestion++;
             // clear selection
